@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+          name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>Title</title>
+    <link crossorigin="anonymous" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
+          integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" rel="stylesheet">
+</head>
+<body>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+<script crossorigin="anonymous" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+</body>
+
+<script>
+    $(function () {
+        // https://github.com/airbnb/javascript
+        function getFormData(idForm) {
+            const formData = idForm.serializeArray().reduce(function (obj, item) {
+                var name = item.name;
+                var value = item.value;
+                obj[name] = value
+                return obj;
+            }, {});
+            return formData;
+        }
+
+        function showErrorMessages(error, ex) {
+            const fieldError = $('#field_error');
+            let messError;
+            switch (error.status) {
+                case 422:
+                    let errors = $.parseJSON(error.responseText);
+                    $.each(errors, function (key, val) {
+                        fieldError.append("<li class='alert alert-danger'>" + val[0].toString() + "</li>")
+                    });
+                    break;
+                case 404:
+                    messError = "Requested page not found. [404]";
+
+                    break;
+                case 500:
+                    messError = "Internal Server Error. [500]";
+
+                    break;
+                default:
+                    messError = 'Uncaught Error.\n' + errors;
+            }
+            fieldError.append("<li class='alert alert-danger'>" + messError.toString() + "</li>")
+        }
+
+        function doX() {
+            // Set's an element's title attribute using it's current text
+            $("$elem").attr("title", $("$elem").text());
+
+            // Set's an element's text color to red
+            $("$elem").css("color", "red");
+
+            // Makes the element fade out
+            $("$elem").fadeOut();
+        }
+
+        function invalidWords(){
+        }
+
+        function dummyCompare(x, y) {
+            if (x == y) {
+                return true
+            }
+
+            return false;
+        }
+
+        // NOTE: dùng thêm eslint.
+    });
+</script>
+</html>
