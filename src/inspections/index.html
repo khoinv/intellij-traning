@@ -32,6 +32,7 @@
         function showErrorMessages(error, ex) {
             const fieldError = $('#field_error');
             let messError;
+            // NOTE: Destruct, switch => if/else, === => !==
             switch (error.status) {
                 case 422:
                     let errors = $.parseJSON(error.responseText);
