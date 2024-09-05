@@ -1,12 +1,13 @@
-### Mục đích: giới hiệu các tính năng intelliJ giúp việc coding hiệu quả hơn.
-##### 1. Giới thiệu Inspections(stricky check ==, duplicatited codes, jquery queries, unused variable, invalid english words, warning when commiting...)
-##### 2. Giới thiệu Refactoring(rename variable, functions, extract refactorings(variable, method...))
-##### 3. Giới thiệu Auto gen code(constructor, get/set, fix inspection warning, errors...)
-##### 4. Giới thiệu Live template(example: useState, emmet...)
-##### 5. Giới thiệu Remote ssh(ssh and re-run migration...)
-##### 6. Giới thiệu External command(example send key 82 to open reload menu, format by prettier, format by vim, tat bat server...)
-##### 8. Giới thiệu Databases query tools(CRUD...)
-##### 9. Giới thiệu Docker tools(connect, exec, run test inside dockers...)
-##### 10. Giới thiệu Deployment(dev, prod...)(git server die)
-##### 11. Bonus: Command+option+a, shift-shift, mọi menu đều search freeze được, view-mode(command + shift + f12), Command E, Command 1, Command 6,  Command 7, split screen...)
-##### 12. Recommend Plugins: Key promoter x, Presentation Assistant, Vim
+### Purpose: Introducing IntelliJ features to enhance coding efficiency.
+
+##### 1. Introduction to Inspections (strictly check ==, duplicated codes, jQuery queries, unused variables, invalid English words, warnings when committing...)
+##### 2. Introduction to Refactoring (rename variables, functions, extract refactorings (variable, method...))
+##### 3. Introduction to Auto Code Generation (constructor, getters/setters, fix inspection warnings, errors...)
+##### 4. Introduction to Live Templates (examples: useState, Emmet...)
+##### 5. Introduction to Remote SSH (SSH and re-run migrations...)
+##### 6. Introduction to External Commands (examples: send key 82 to open reload menu, format by Prettier, format by Vim, toggle server on/off...)
+##### 8. Introduction to Database Query Tools (CRUD...)
+##### 9. Introduction to Docker Tools (connect, exec, run tests inside Docker...)
+##### 10. Introduction to Deployment (dev, prod...) (e.g., handling git server downtime)
+##### 11. Bonus: Command+Option+A, Shift-Shift, search across all menus, freeze view mode (Command + Shift + F12), Command E, Command 1, Command 6, Command 7, split screen...)
+##### 12. Recommended Plugins: Key Promoter X, Presentation Assistant, Vim
